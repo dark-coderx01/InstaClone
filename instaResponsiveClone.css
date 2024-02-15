@@ -1,0 +1,418 @@
+* {
+  box-sizing: border-box;
+  margin: 0%;
+  padding: 0%;
+}
+body {
+  width: 100%;
+  height: 100%;
+}
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+
+  display: flex;
+}
+.sidebar {
+  width: 240px;
+  height: 70px;
+  position: fixed;
+}
+
+.logo {
+  width: inherit;
+  padding: 10px;
+  margin: 10px;
+  letter-spacing: 2px;
+
+  position: relative;
+}
+.logo button {
+  position: absolute;
+  right: 0;
+  margin: 5px;
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  display: none;
+}
+.logo #mnote {
+  margin-right: 35px;
+}
+.logo #mmsg {
+  margin-right: 10px;
+}
+
+.logo button p {
+  display: none;
+}
+.logo h1 {
+  display: inline;
+  font-family: "Cookie";
+}
+.menu {
+  position: fixed;
+  height: 500px;
+  margin-top: 50px;
+  margin-right: 20px;
+}
+.home {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 10px;
+}
+.home button {
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Courier New", Courier, monospace;
+  border: none;
+  padding: 8px;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  background: transparent;
+}
+button .fa-house {
+  letter-spacing: 15px;
+}
+
+button img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+button #profile1 {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: cover;
+  object-position: center;
+}
+
+.content {
+  width: 42rem;
+  height: 100%;
+  margin-left: 240px;
+}
+.content .header {
+  width: 95%;
+  height: 120px;
+  margin: 15px;
+  padding: 10px;
+  display: flex;
+}
+.header .story {
+  width: max-content;
+  height: max-content;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.story p {
+  font-weight: 700;
+  text-align: center;
+}
+.header .story1 {
+  width: 75px;
+  height: 75px;
+  background: linear-gradient(
+    to bottom right,
+    rgb(232, 249, 43),
+    rgb(245, 22, 245),
+    rgb(245, 38, 15)
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+#closestory {
+  background: none;
+  background-color: rgb(6, 240, 6);
+}
+
+.story1 img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+.feed {
+  width: 90%;
+  height: 100%;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.feed .post {
+  width: 80%;
+  height: 30rem;
+  margin: auto;
+}
+.post .info {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+  gap: 10px;
+}
+.info .fa-certificate {
+  color: rgb(0, 149, 255);
+}
+
+.info p {
+  font-weight: 800;
+}
+
+.info .fa-circle {
+  font-size: 5px;
+  color: gray;
+}
+
+.info .des {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-left: 10px;
+  background: linear-gradient(
+    to bottom right,
+    rgb(232, 249, 43),
+    rgb(245, 22, 245),
+    rgb(245, 38, 15)
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.des img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.post .post1 {
+  width: 100%;
+  height: 65%;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.post .likecomment {
+  position: relative;
+  width: 100%;
+  height: 26px;
+  margin: auto;
+  letter-spacing: 3px;
+  font-size: 20px;
+}
+
+.post #likes {
+  font-weight: 700;
+  margin: 5px;
+}
+
+.post .fa-bookmark {
+  position: absolute;
+  letter-spacing: 3px;
+  font-size: 20px;
+  margin-top: 2px;
+  right: 0;
+}
+
+.post .fa-heart {
+  color: red;
+}
+
+.profile {
+  width: calc(100% - (240px + 42rem));
+  height: 400px;
+  margin-left: calc(240px + 42rem);
+  position: fixed;
+}
+
+.profile .profile-header {
+  width: 100%;
+  height: 80px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+  position: relative;
+}
+.profile-header .profile-pic {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(
+    to bottom right,
+    rgb(232, 249, 43),
+    rgb(245, 22, 245),
+    rgb(245, 38, 15)
+  );
+  border-radius: 50%;
+  margin-left: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-pic img {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.profile-header .profile-user {
+  display: block;
+  margin: 5px;
+  text-align: center;
+}
+
+#switch {
+  margin-left: 120px;
+  margin-right: 5px;
+  color: rgb(0, 174, 255);
+}
+
+.profile .profile-followers {
+  width: 100%;
+  height: 300px;
+  position: relative;
+}
+
+.profile .profile-info {
+  width: 100%;
+  height: 40px;
+  position: relative;
+}
+.profile-info .proinfo {
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+}
+#seeAll {
+  margin-left: 165px;
+  margin-right: 5px;
+}
+
+.profile-followers .follower-info {
+  width: 100%;
+  height: 65px;
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+}
+
+.follower-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 5px;
+}
+
+.follower-pic img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.follower-name {
+  display: block;
+  margin: 5px;
+}
+#follow {
+  margin-left: 165px;
+  font-size: 14px;
+  font-weight: 800;
+  color: rgb(0, 174, 255);
+}
+
+@media only screen and (max-width: 700px) {
+  .wrapper {
+    display: flex;
+    overflow: auto;
+  }
+  .sidebar {
+    z-index: 2;
+    background-color: #fff;
+    width: 100%;
+  }
+  .logo button {
+    display: inline;
+  }
+  .menu {
+    width: 100%;
+    height: 70px;
+    bottom: 0;
+    display: flex;
+    justify-content: end;
+
+    z-index: 3;
+  }
+
+  .home {
+    display: flex;
+    justify-content: space-evenly;
+
+    flex-direction: row;
+    width: 100%;
+    margin: auto;
+    position: sticky;
+    background-color: white;
+  }
+
+  button {
+    width: 30px;
+    height: 30px;
+  }
+  #home p,
+  #search p,
+  #create p,
+  #reels p,
+  #profile1 p {
+    display: none;
+    margin: auto;
+  }
+
+  #explore,
+  #msg,
+  #note,
+  #menu {
+    display: none;
+  }
+
+  .content {
+    width: 100%;
+    position: relative;
+    margin-top: 50px;
+    margin-left: 0px;
+  }
+
+  .header {
+    width: 100%;
+    overflow: auto;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .profile {
+    display: none;
+  }
+}
